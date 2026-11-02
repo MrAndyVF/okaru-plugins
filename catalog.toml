@@ -1,0 +1,3 @@
+# Catálogo de plugins de OKARU (郁).
+# Una fila [[plugin]] por cada subcarpeta de plugin; el plugin.toml de cada una manda.
+# Formato compatible con el de Noctalia (API Luau `noctalia.*`).
