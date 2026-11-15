@@ -7,7 +7,26 @@ Ningún plugin viene instalado: cada usuario elige cuáles instalar desde **Ajus
 ## Estructura
 
 - `catalog.toml`: índice de los plugins (una fila `[[plugin]]` por carpeta).
-- `<plugin>/plugin.toml`: manifiesto del plugin, junto a sus archivos `.luau` y `translations/`.
+- `<plugin>/plugin.toml`: manifiesto del plugin, junto a sus archivos `.luau`, `translations/` y su `LICENSE`.
+- `tools/build_catalog.py`: genera `catalog.toml` a partir de los `plugin.toml`.
+
+## Plugins
+
+| Plugin | Autor | Licencia |
+|---|---|---|
+| [Claude Code Usage](claudecode) | Nicolas Bellamy (adaptación a Noctalia de jrohland) | MIT |
+| [Cursor](cursor) | Vn1k | MIT |
+| [Icons](icons) | Vn1k | MIT |
+
+Cada plugin conserva su `LICENSE` y la autoría original; OKARU los mantiene y adapta.
+
+## Aportar un plugin
+
+1. Crea `<carpeta>/` con `plugin.toml` (`id = "<autor>/<carpeta>"`, `name`, `version` MAYOR.MENOR.PARCHE,
+   `plugin_api`), sus archivos y un `LICENSE`.
+2. Ejecuta `python3 tools/build_catalog.py` y sube `catalog.toml` en el mismo pull request.
+
+La GitHub Action comprueba que `catalog.toml` esté al día y que cada plugin tenga lo obligatorio.
 
 El formato y la API (`noctalia.*`) son compatibles con los plugins de Noctalia.
 

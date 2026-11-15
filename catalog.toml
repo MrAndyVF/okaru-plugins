@@ -1,3 +1,38 @@
-# Catálogo de plugins de OKARU (郁).
+# Catálogo de plugins de OKARU (郁). Generado por tools/build_catalog.py: no editar a mano.
 # Una fila [[plugin]] por cada subcarpeta de plugin; el plugin.toml de cada una manda.
-# Formato compatible con el de Noctalia (API Luau `noctalia.*`).
+
+[[plugin]]
+id = "okaru/claudecode"
+name = "Claude Code Usage"
+version = "1.1.2"
+plugin_api = 43
+author = "Nicolas Bellamy (Noctalia port by jrohland)"
+license = "MIT"
+icon = "robot"
+description = "Claude Code subscription usage: rate limits, token burn, cost, daily activity and per-model breakdown."
+tags = ["ai", "development", "indicator", "system", "bar", "desktop", "panel", "service"]
+dependencies = ["bash", "jq", "curl", "awk", "grep", "date", "cut", "tr", "wc", "cat", "head", "find", "basename", "mktemp", "mkdir", "mv", "rm", "seq", "sort", "xargs"]
+
+[[plugin]]
+id = "okaru/cursor"
+name = "Cursor"
+version = "1.0.8"
+plugin_api = 43
+author = "Vn1k"
+license = "MIT"
+icon = "pointer"
+description = "Pick, import and build cursor themes, then apply them everywhere at once."
+tags = ["panel", "shortcut", "theming", "utility", "niri", "hyprland", "sway", "mangowc", "umbriel"]
+dependencies = ["python3", "win2xcur", "python-wand", "imagemagick", "zenity"]
+
+[[plugin]]
+id = "okaru/icons"
+name = "Icons"
+version = "1.0.0"
+plugin_api = 43
+author = "Vn1k"
+license = "MIT"
+icon = "icons"
+description = "Pick, preview and install icon themes, browse gnome-look.org, and recolor Papirus folders."
+tags = ["panel", "shortcut", "theming", "utility"]
+dependencies = ["python3", "zenity"]
