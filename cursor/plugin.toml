@@ -1,6 +1,6 @@
 id = "okaru/cursor"
 name = "Cursor"
-version = "1.0.8"
+version = "1.0.9"
 # The highest level any entry uses: require() of shared.luau is 22. The store
 # validator does not check it, so keep it in step by hand.
 plugin_api = 43

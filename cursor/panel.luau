@@ -338,7 +338,7 @@ local function themeTile(theme)
   local width = tileWidth()
   local preview = previews[theme.name]
   local border = isSelected and "primary" or "outline_variant"
-  local borderWidth = isSelected and 3 or 1
+  local borderWidth = isSelected and 3 or 2
   local onClick = function()
     selected = theme.name
     render()
@@ -586,11 +586,11 @@ local function mapRoleTile(st, role, byRel)
   if preview ~= nil then
     frame = ui.image({ key = `role_img_{st.tab}_{role}_{st.serial}_{override or "auto"}`,
                        width = MAP_TILE, height = MAP_TILE, path = preview, fit = "contain",
-                       radius = 8, border = border, borderWidth = isArmed and 3 or 1,
+                       radius = 8, border = border, borderWidth = isArmed and 3 or 2,
                        tooltip = tip, onClick = onClick })
   else
     frame = ui.box({ width = MAP_TILE, height = MAP_TILE, fill = "surface_container",
-                     radius = 8, border = border, borderWidth = isArmed and 3 or 1,
+                     radius = 8, border = border, borderWidth = isArmed and 3 or 2,
                      tooltip = tip, onClick = onClick })
   end
   local tile = ui.column({ key = `role_{st.tab}_{role}`, gap = 2, align = "center", width = 60 }, {
