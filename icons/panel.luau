@@ -360,7 +360,7 @@ local function iconCell(icon)
                       height = ICON, fit = "contain", tooltip = icon.name })
   end
   -- A gap, not a stand-in: the theme really does not have this icon.
-  return ui.box({ width = ICON, height = ICON, radius = 8, border = "outline_variant", borderWidth = 1,
+  return ui.box({ width = ICON, height = ICON, radius = 8, border = "outline_variant", borderWidth = 2,
                   tooltip = `{icon.name}: {tr("missing_icon")}` })
 end
 
@@ -381,6 +381,7 @@ local function specimenSheet()
                                 minHeight = ICON }, cells))
   end
   return ui.column({ gap = 14, padding = 18, radius = 12, fill = "surface_container",
+                     border = "outline_variant", borderWidth = 2,
                      align = "stretch" }, rows)
 end
 
@@ -401,7 +402,7 @@ local function folderColors()
       fit = "contain", radius = 6,
       tooltip = state == "applied" and `{c.name} ({tr("applied_now")})` or c.name,
       border = state == "picked" and "primary" or (state == "applied" and "outline_variant" or nil),
-      borderWidth = state == "plain" and 0 or (state == "picked" and 2 or 1),
+      borderWidth = state == "plain" and 0 or (state == "picked" and 3 or 2),
       onClick = function() onFolderColor(c.name) end,
     }))
     if #swatches == 13 then

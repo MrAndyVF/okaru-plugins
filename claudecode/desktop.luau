@@ -41,6 +41,7 @@ end
 local function card(children)
   return ui.column({
     gap = 8, padding = PAD, fill = "surface_container/0.45", radius = 12, width = PANEL_W,
+    border = "outline_variant", borderWidth = 2,
   }, children)
 end
 
